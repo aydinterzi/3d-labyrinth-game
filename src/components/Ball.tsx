@@ -1,18 +1,15 @@
-import { RapierRigidBody, RigidBody } from "@react-three/rapier";
-import { useRef } from "react";
+import { RigidBody } from "@react-three/rapier";
 
 function Ball() {
-  const ball = useRef<RapierRigidBody>(null);
-
   return (
     <RigidBody
       type="dynamic"
       mass={1}
       position={[0, 5, 0]}
-      ref={ball}
       restitution={0.5}
+      colliders="ball"
     >
-      <mesh position={[0, 5, 0]}>
+      <mesh>
         <sphereGeometry args={[0.5, 16, 16]} />
         <meshStandardMaterial color="blue" />
       </mesh>

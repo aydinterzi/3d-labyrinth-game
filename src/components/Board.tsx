@@ -37,6 +37,12 @@ function Board() {
     if (keysPressed["ArrowDown"]) {
       x += 0.015;
     }
+    if (keysPressed["ArrowUp"] && keysPressed["w"]) {
+      z -= 0.01;
+    }
+    if (keysPressed["ArrowDown"] && keysPressed["s"]) {
+      z += 0.01;
+    }
 
     rotationRef.current = { x, y, z };
 

@@ -4,7 +4,7 @@ function Ball() {
   return (
     <RigidBody
       type="dynamic"
-      mass={1}
+      mass={2}
       position={[0, 5, 0]}
       restitution={0.5}
       colliders="ball"
